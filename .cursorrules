@@ -1,0 +1,230 @@
+# Riva Landing Page - Cursor Rules
+
+## Project Context
+Riva is a premium landing page for an AI-powered React Native fitness app combining Strong-style workout tracking with GPT-4 AI coaching and Strava-like social features.
+
+## Tech Stack
+- React 18 with Vite
+- Motion (Framer Motion v11) for animations
+- Tailwind CSS v3 for styling
+- Lucide React for icons
+- Custom components in /src/components
+
+## Design System
+
+### Colors (Primary Purple Theme)
+- Primary: #6366F1, #8B5CF6, #7C3AED, #9333EA
+- Secondary: Orange (#F97316), Green (#10B981), Red (#EF4444)
+- Neutrals: #1F2937 (dark), #F9FAFB (light), #FFFFFF
+- Always use purple gradients: `from-purple-600 to-purple-500`
+
+### Typography Rules
+**CRITICAL**: NEVER add Tailwind font-size, font-weight, or line-height classes
+- Typography uses CSS custom properties in src/index.css
+- Properties: --font-size-*, --font-weight-*, --line-height-*
+- HTML elements (h1-h6, p) have pre-defined styles
+- Only override if explicitly requested by user
+
+### Animation Guidelines
+- Use Motion (motion/react) for all animations
+- Scroll animations: `whileInView` with `viewport={{ once: true }}`
+- Hover effects: `whileHover={{ scale: 1.05 }}`
+- Always include transition durations
+- Stagger animations with delay props
+
+### Component Structure
+- Keep components modular in /src/components
+- Use cn() utility from @/lib/utils for className merging
+- Follow card-based design pattern (rounded-2xl, shadow-lg)
+- Phone mockups use PhoneMockup + AppScreenshot components
+
+### Responsive Design
+- Mobile-first approach
+- Breakpoints: sm: 640px, md: 768px, lg: 1024px, xl: 1280px
+- Test all layouts on mobile, tablet, and desktop
+
+## Code Style
+
+### Import Order
+1. React
+2. Motion/Framer Motion
+3. Lucide React icons
+4. Local components
+5. Utilities
+
+### Component Pattern
+```jsx
+import React from 'react';
+import { motion } from 'motion/react';
+import { Icon } from 'lucide-react';
+import { cn } from '@/lib/utils';
+
+export function ComponentName({ prop1, prop2, className }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      className={cn("base-classes", className)}
+    >
+      {/* Content */}
+    </motion.div>
+  );
+}
+```
+
+### Button Variants
+- primary: Purple gradient with shadow
+- secondary: White with purple border
+- outline: Transparent with gray border
+
+### Gradient Text Pattern
+```jsx
+<span className="bg-gradient-to-r from-purple-600 to-purple-500 bg-clip-text text-transparent">
+  Gradient Text
+</span>
+```
+
+## File Structure
+```
+src/
+├── components/        # Reusable UI components
+│   ├── PhoneMockup.jsx
+│   ├── FeatureCard.jsx
+│   ├── TestimonialCard.jsx
+│   ├── StatCard.jsx
+│   ├── AppScreenshot.jsx
+│   └── Button.jsx
+├── lib/
+│   └── utils.js      # cn() utility
+├── App.jsx           # Main app with all sections
+├── index.css         # Global styles + CSS variables
+└── main.jsx          # Entry point
+```
+
+## Landing Page Sections (in order)
+1. Navigation - Fixed blur backdrop navbar
+2. Hero - Gradient bg with animated orbs + phone mockup
+3. Core Features - 4 feature cards
+4. Screenshots Gallery - 3 phone mockups
+5. AI Capabilities - Side-by-side with AI chat demo
+6. Premium Pricing - Free vs Premium comparison
+7. Social Proof - Testimonials + animated stats
+8. Technology Stack - Tech badges grid
+9. Download CTA - Purple gradient full-width
+10. Footer - Links and copyright
+
+## Key Components
+
+### PhoneMockup
+- iPhone-style frame with notch
+- Side buttons for realism
+- Use with AppScreenshot for content
+
+### FeatureCard
+- Hoverable cards with lift effect
+- Icon in purple gradient circle
+- Optional gradient background
+
+### StatCard
+- Animated counter (counts up on scroll)
+- Gradient text for numbers
+- Optional icon
+
+### TestimonialCard
+- 5-star rating display
+- Avatar or initial circle
+- Quote with author info
+
+## Animation Patterns
+
+### Fade In on Scroll
+```jsx
+initial={{ opacity: 0, y: 20 }}
+whileInView={{ opacity: 1, y: 0 }}
+viewport={{ once: true }}
+transition={{ duration: 0.5 }}
+```
+
+### Hover Scale
+```jsx
+whileHover={{ scale: 1.05, y: -8 }}
+transition={{ duration: 0.3 }}
+```
+
+### Stagger Children
+```jsx
+// Parent
+transition={{ staggerChildren: 0.1 }}
+
+// Children
+transition={{ delay: index * 0.1 }}
+```
+
+## Common Patterns
+
+### Section Header
+```jsx
+<div className="text-center mb-16">
+  <h2 className="mb-4 text-gray-900">Title</h2>
+  <p className="text-gray-600 max-w-2xl mx-auto">Description</p>
+</div>
+```
+
+### Section Container
+```jsx
+<section className="py-20 px-6">
+  <div className="max-w-7xl mx-auto">
+    {/* Content */}
+  </div>
+</section>
+```
+
+### Gradient Overlay
+```jsx
+<div className="absolute inset-0 bg-gradient-to-br from-purple-600/10 to-purple-500/10 opacity-0 hover:opacity-100 transition-opacity"></div>
+```
+
+## Do's and Don'ts
+
+### DO:
+✅ Use Motion for all animations
+✅ Keep purple as primary brand color
+✅ Use gradient text for emphasis
+✅ Follow card-based design pattern
+✅ Test responsive layouts
+✅ Use viewport={{ once: true }} for scroll animations
+✅ Keep components modular and reusable
+
+### DON'T:
+❌ Add Tailwind font classes (font-bold, text-xl, etc.)
+❌ Use colors outside the brand palette
+❌ Create animations without Motion
+❌ Hardcode values that should be props
+❌ Forget mobile responsiveness
+❌ Use inline styles
+❌ Skip accessibility attributes
+
+## Performance
+- Use viewport={{ once: true }} to prevent re-animations
+- Lazy load images when possible
+- Keep animations under 0.5s for snappiness
+- Minimize bundle size with tree-shaking
+
+## Maintenance
+- All typography changes go in src/index.css
+- Color palette in tailwind.config.js
+- New components in src/components/
+- Keep App.jsx section-based for clarity
+
+## When Adding Features
+1. Check if existing components can be reused
+2. Follow established patterns
+3. Match existing animation style
+4. Maintain responsive behavior
+5. Use purple gradient theme
+6. Test on mobile first
+
+---
+Remember: Premium, modern, purple-themed, animated, mobile-first!
+
