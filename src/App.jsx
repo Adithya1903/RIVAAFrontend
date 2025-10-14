@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 import { 
   Menu, X, Apple, Play, Dumbbell, Brain, Users, TrendingUp,
   Target, Sparkles, Zap, Award, CheckCircle2, Star,
-  Activity, Heart, Calendar, ArrowRight, ChevronDown
+  Activity, Heart, Calendar, ArrowRight, ChevronDown, Video, Mail, Check, Rocket
 } from 'lucide-react';
 import { PhoneMockup } from './components/PhoneMockup';
 import { FeatureCard } from './components/FeatureCard';
@@ -130,8 +130,8 @@ function HeroSection() {
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100 text-purple-700 mb-6">
-              <Sparkles className="w-4 h-4" />
-              <span>AI-Powered Fitness Tracking</span>
+              <Rocket className="w-4 h-4" />
+              <span>In Active Development</span>
             </div>
             
             <h1 className="mb-6 text-gray-900">
@@ -144,15 +144,69 @@ function HeroSection() {
               community of Strava.
             </p>
 
+            {/* Video Buttons */}
             <div className="flex flex-wrap gap-4 mb-8">
-              <Button size="lg" icon={Apple}>
-                Download for iOS
-              </Button>
-              <Button size="lg" variant="secondary" icon={Play}>
-                Get on Android
-              </Button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-semibold bg-gradient-to-r from-purple-600 to-purple-500 text-white shadow-lg shadow-purple-500/30 transition-all"
+              >
+                <Play className="w-5 h-5" />
+                View Intro Video
+              </motion.button>
+              
+              <motion.button
+                whileHover={{ scale: 1.05, backgroundColor: 'rgb(250 245 255)' }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-semibold bg-transparent text-gray-900 border-2 border-purple-200 hover:border-purple-300 transition-all"
+              >
+                <Video className="w-5 h-5" />
+                View Demo
+              </motion.button>
             </div>
 
+            {/* Enhanced Waitlist Section */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="rounded-2xl border-2 border-purple-200 bg-white shadow-lg p-8 mb-8"
+            >
+              <h3 className="mb-4 text-gray-900">Join the waitlist for early access</h3>
+              
+              <form className="flex flex-col sm:flex-row gap-3 mb-4">
+                <input
+                  type="email"
+                  placeholder="your@email.com"
+                  className="flex-1 px-6 py-4 rounded-xl border-2 border-gray-200 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 outline-none transition-all text-lg"
+                />
+                <Button 
+                  size="lg" 
+                  icon={Mail}
+                  className="w-full sm:w-auto whitespace-nowrap"
+                >
+                  Join Waitlist
+                </Button>
+              </form>
+
+              {/* Benefit Badges */}
+              <div className="flex flex-wrap gap-2">
+                <div className="inline-flex items-center gap-2 rounded-full bg-purple-50 px-3 py-1.5">
+                  <Check className="w-4 h-4 text-green-500" />
+                  <span className="text-sm text-purple-700">Early Access</span>
+                </div>
+                <div className="inline-flex items-center gap-2 rounded-full bg-purple-50 px-3 py-1.5">
+                  <Check className="w-4 h-4 text-green-500" />
+                  <span className="text-sm text-purple-700">Exclusive Updates</span>
+                </div>
+                <div className="inline-flex items-center gap-2 rounded-full bg-purple-50 px-3 py-1.5">
+                  <Check className="w-4 h-4 text-green-500" />
+                  <span className="text-sm text-purple-700">Launch Discount</span>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Stats */}
             <div className="flex items-center gap-8 text-sm text-gray-600">
               <div className="flex items-center gap-2">
                 <Star className="w-5 h-5 fill-purple-600 text-purple-600" />
