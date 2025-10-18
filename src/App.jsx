@@ -3,7 +3,8 @@ import { motion } from 'motion/react';
 import { 
   Menu, X, Apple, Play, Dumbbell, Brain, Users, TrendingUp,
   Target, Sparkles, Zap, Award, CheckCircle2, Star,
-  Activity, Heart, Calendar, ArrowRight, ChevronDown, Video, Mail, Check, Rocket
+  Activity, Heart, Calendar, ArrowRight, ChevronDown, Video, Mail, Check, Rocket,
+  Smartphone, Bot, Network, Cloud, FileText, Database, Flame
 } from 'lucide-react';
 import { PhoneMockup } from './components/PhoneMockup';
 import { FeatureCard } from './components/FeatureCard';
@@ -62,20 +63,20 @@ function Navigation({ mobileMenuOpen, setMobileMenuOpen }) {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-600 to-purple-500 flex items-center justify-center text-white">
-              <Dumbbell className="w-6 h-6" />
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-600 to-orange-500 flex items-center justify-center text-white">
+              <Flame className="w-6 h-6" />
             </div>
-            <span className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-purple-500 bg-clip-text text-transparent">
-              Riva
+            <span className="text-2xl font-bold bg-gradient-to-r from-orange-600 to-orange-500 bg-clip-text text-transparent">
+              Burn
             </span>
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#features" className="text-gray-700 hover:text-purple-600 transition-colors">Features</a>
-            <a href="#ai" className="text-gray-700 hover:text-purple-600 transition-colors">AI Coach</a>
-            <a href="#pricing" className="text-gray-700 hover:text-purple-600 transition-colors">Pricing</a>
-            <a href="#testimonials" className="text-gray-700 hover:text-purple-600 transition-colors">Reviews</a>
+            <a href="#features" className="text-gray-700 hover:text-orange-600 transition-colors">Features</a>
+            <a href="#ai" className="text-gray-700 hover:text-orange-600 transition-colors">AI Coach</a>
+            <a href="#pricing" className="text-gray-700 hover:text-orange-600 transition-colors">Pricing</a>
+            <a href="#testimonials" className="text-gray-700 hover:text-orange-600 transition-colors">Reviews</a>
             <Button size="sm">Download</Button>
           </div>
 
@@ -97,10 +98,10 @@ function Navigation({ mobileMenuOpen, setMobileMenuOpen }) {
             className="md:hidden pt-4 pb-2 border-t border-gray-200 mt-4"
           >
             <div className="flex flex-col gap-4">
-              <a href="#features" className="text-gray-700 hover:text-purple-600 transition-colors">Features</a>
-              <a href="#ai" className="text-gray-700 hover:text-purple-600 transition-colors">AI Coach</a>
-              <a href="#pricing" className="text-gray-700 hover:text-purple-600 transition-colors">Pricing</a>
-              <a href="#testimonials" className="text-gray-700 hover:text-purple-600 transition-colors">Reviews</a>
+              <a href="#features" className="text-gray-700 hover:text-orange-600 transition-colors">Features</a>
+              <a href="#ai" className="text-gray-700 hover:text-orange-600 transition-colors">AI Coach</a>
+              <a href="#pricing" className="text-gray-700 hover:text-orange-600 transition-colors">Pricing</a>
+              <a href="#testimonials" className="text-gray-700 hover:text-orange-600 transition-colors">Reviews</a>
               <Button size="sm" className="w-full">Download</Button>
             </div>
           </motion.div>
@@ -115,11 +116,11 @@ function HeroSection() {
   return (
     <section className="relative pt-32 pb-20 px-6 overflow-hidden">
       {/* Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-100 via-white to-purple-50 -z-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-orange-100 via-white to-orange-50 -z-10"></div>
       
       {/* Animated Orbs */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-purple-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
-      <div className="absolute top-40 right-10 w-72 h-72 bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute top-20 left-10 w-72 h-72 bg-orange-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+      <div className="absolute top-40 right-10 w-72 h-72 bg-orange-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style={{ animationDelay: '2s' }}></div>
 
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -129,7 +130,7 @@ function HeroSection() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100 text-purple-700 mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 text-orange-700 mb-6">
               <Rocket className="w-4 h-4" />
               <span>In Active Development</span>
             </div>
@@ -140,7 +141,7 @@ function HeroSection() {
             
             <p className="mb-8 text-gray-600 max-w-xl">
               Experience the perfect blend of workout tracking, AI coaching, and social motivation. 
-              Riva combines the precision of Strong with the intelligence of GPT-4 and the 
+              Burn combines the precision of Strong with the intelligence of GPT-4 and the 
               community of Strava.
             </p>
 
@@ -149,7 +150,7 @@ function HeroSection() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-semibold bg-gradient-to-r from-purple-600 to-purple-500 text-white shadow-lg shadow-purple-500/30 transition-all"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-semibold bg-gradient-to-r from-orange-600 to-orange-500 text-white shadow-lg shadow-orange-500/30 transition-all"
               >
                 <Play className="w-5 h-5" />
                 View Intro Video
@@ -158,7 +159,7 @@ function HeroSection() {
               <motion.button
                 whileHover={{ scale: 1.05, backgroundColor: 'rgb(250 245 255)' }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-semibold bg-transparent text-gray-900 border-2 border-purple-200 hover:border-purple-300 transition-all"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-semibold bg-transparent text-gray-900 border-2 border-orange-200 hover:border-orange-300 transition-all"
               >
                 <Video className="w-5 h-5" />
                 View Demo
@@ -170,7 +171,7 @@ function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="rounded-2xl border-2 border-purple-200 bg-white shadow-lg p-8 mb-8"
+              className="rounded-2xl border-2 border-orange-200 bg-white shadow-lg p-8 mb-8"
             >
               <h3 className="mb-4 text-gray-900">Join the waitlist for early access</h3>
               
@@ -178,7 +179,7 @@ function HeroSection() {
                 <input
                   type="email"
                   placeholder="your@email.com"
-                  className="flex-1 px-6 py-4 rounded-xl border-2 border-gray-200 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 outline-none transition-all text-lg"
+                  className="flex-1 px-6 py-4 rounded-xl border-2 border-gray-200 focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 outline-none transition-all text-lg"
                 />
                 <Button 
                   size="lg" 
@@ -191,32 +192,20 @@ function HeroSection() {
 
               {/* Benefit Badges */}
               <div className="flex flex-wrap gap-2">
-                <div className="inline-flex items-center gap-2 rounded-full bg-purple-50 px-3 py-1.5">
+                <div className="inline-flex items-center gap-2 rounded-full bg-orange-50 px-3 py-1.5">
                   <Check className="w-4 h-4 text-green-500" />
-                  <span className="text-sm text-purple-700">Early Access</span>
+                  <span className="text-sm text-orange-700">Early Access</span>
                 </div>
-                <div className="inline-flex items-center gap-2 rounded-full bg-purple-50 px-3 py-1.5">
+                <div className="inline-flex items-center gap-2 rounded-full bg-orange-50 px-3 py-1.5">
                   <Check className="w-4 h-4 text-green-500" />
-                  <span className="text-sm text-purple-700">Exclusive Updates</span>
+                  <span className="text-sm text-orange-700">Exclusive Updates</span>
                 </div>
-                <div className="inline-flex items-center gap-2 rounded-full bg-purple-50 px-3 py-1.5">
+                <div className="inline-flex items-center gap-2 rounded-full bg-orange-50 px-3 py-1.5">
                   <Check className="w-4 h-4 text-green-500" />
-                  <span className="text-sm text-purple-700">Launch Discount</span>
+                  <span className="text-sm text-orange-700">Launch Discount</span>
                 </div>
               </div>
             </motion.div>
-
-            {/* Stats */}
-            <div className="flex items-center gap-8 text-sm text-gray-600">
-              <div className="flex items-center gap-2">
-                <Star className="w-5 h-5 fill-purple-600 text-purple-600" />
-                <span>4.9/5 Rating</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Users className="w-5 h-5 text-purple-600" />
-                <span>50K+ Users</span>
-              </div>
-            </div>
           </motion.div>
 
           {/* Right Phone Mockup */}
@@ -239,7 +228,7 @@ function HeroSection() {
                   </div>
 
                   {/* Progress Ring */}
-                  <div className="mt-8 p-6 rounded-2xl bg-gradient-to-br from-purple-600 to-purple-500 text-white">
+                  <div className="mt-8 p-6 rounded-2xl bg-gradient-to-br from-orange-600 to-orange-500 text-white">
                     <div className="flex items-center justify-between mb-2">
                       <span>Daily Goal</span>
                       <span>75%</span>
@@ -261,7 +250,7 @@ function HeroSection() {
         transition={{ repeat: Infinity, duration: 2 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
       >
-        <ChevronDown className="w-6 h-6 text-purple-600" />
+        <ChevronDown className="w-6 h-6 text-orange-600" />
       </motion.div>
     </section>
   );
@@ -275,7 +264,7 @@ function WorkoutCard({ exercise, sets, weight }) {
         <div className="font-semibold text-gray-900">{exercise}</div>
         <div className="text-sm text-gray-500">{sets}</div>
       </div>
-      <div className="text-purple-600 font-semibold">{weight}</div>
+      <div className="text-orange-600 font-semibold">{weight}</div>
     </div>
   );
 }
@@ -290,7 +279,7 @@ function FeaturesSection() {
     },
     {
       icon: Brain,
-      title: "AI Coaching",
+      title: "AI-Powered Coaching",
       description: "Get personalized workout plans and real-time form feedback powered by GPT-4 intelligence."
     },
     {
@@ -317,7 +306,7 @@ function FeaturesSection() {
         >
           <h2 className="mb-4 text-gray-900">Everything You Need</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Riva combines powerful features to help you achieve your fitness goals faster and smarter.
+            Burn combines powerful features to help you achieve your fitness goals faster and smarter.
           </p>
         </motion.div>
 
@@ -427,18 +416,18 @@ function ProgressScreen() {
       <h3 className="mb-6 text-gray-900">Your Progress</h3>
       <div className="space-y-6">
         {/* Chart Placeholder */}
-        <div className="h-40 rounded-xl bg-gradient-to-br from-purple-100 to-purple-50 flex items-center justify-center">
-          <TrendingUp className="w-12 h-12 text-purple-600" />
+        <div className="h-40 rounded-xl bg-gradient-to-br from-orange-100 to-orange-50 flex items-center justify-center">
+          <TrendingUp className="w-12 h-12 text-orange-600" />
         </div>
         
         {/* Stats */}
         <div className="grid grid-cols-2 gap-4">
           <div className="p-4 rounded-xl bg-white border border-gray-200">
-            <div className="text-2xl font-bold text-purple-600">32</div>
+            <div className="text-2xl font-bold text-orange-600">32</div>
             <div className="text-sm text-gray-600">Workouts</div>
           </div>
           <div className="p-4 rounded-xl bg-white border border-gray-200">
-            <div className="text-2xl font-bold text-purple-600">12k</div>
+            <div className="text-2xl font-bold text-orange-600">12k</div>
             <div className="text-sm text-gray-600">Calories</div>
           </div>
         </div>
@@ -458,7 +447,7 @@ function SocialScreen() {
           { name: 'Alex K.', action: 'joined a challenge', time: '6h ago' }
         ].map((activity, i) => (
           <div key={i} className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-600 to-purple-500 flex items-center justify-center text-white">
+            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-orange-600 to-orange-500 flex items-center justify-center text-white">
               {activity.name.charAt(0)}
             </div>
             <div className="flex-1">
@@ -491,7 +480,7 @@ function AISection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100 text-purple-700 mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 text-orange-700 mb-6">
               <Brain className="w-4 h-4" />
               <span>Powered by GPT-4</span>
             </div>
@@ -512,7 +501,7 @@ function AISection() {
                   transition={{ delay: index * 0.1 }}
                   className="flex items-start gap-4"
                 >
-                  <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-purple-600 to-purple-500 flex items-center justify-center text-white">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-orange-600 to-orange-500 flex items-center justify-center text-white">
                     <feature.icon className="w-6 h-6" />
                   </div>
                   <div>
@@ -538,10 +527,10 @@ function AISection() {
                   {/* Chat Messages */}
                   <div className="space-y-4">
                     <div className="flex gap-2">
-                      <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-600 to-purple-500 flex items-center justify-center text-white flex-shrink-0">
+                      <div className="w-8 h-8 rounded-full bg-gradient-to-br from-orange-600 to-orange-500 flex items-center justify-center text-white flex-shrink-0">
                         <Brain className="w-4 h-4" />
                       </div>
-                      <div className="flex-1 p-3 rounded-2xl bg-purple-100">
+                      <div className="flex-1 p-3 rounded-2xl bg-orange-100">
                         <p className="text-sm text-gray-900">
                           Based on your progress, I recommend increasing your bench press weight by 5 lbs next session.
                         </p>
@@ -557,10 +546,10 @@ function AISection() {
                     </div>
 
                     <div className="flex gap-2">
-                      <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-600 to-purple-500 flex items-center justify-center text-white flex-shrink-0">
+                      <div className="w-8 h-8 rounded-full bg-gradient-to-br from-orange-600 to-orange-500 flex items-center justify-center text-white flex-shrink-0">
                         <Brain className="w-4 h-4" />
                       </div>
-                      <div className="flex-1 p-3 rounded-2xl bg-purple-100">
+                      <div className="flex-1 p-3 rounded-2xl bg-orange-100">
                         <p className="text-sm text-gray-900">
                           Great depth! Try keeping your chest more upright on the descent.
                         </p>
@@ -637,11 +626,11 @@ function PricingSection() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               className={`relative p-8 rounded-2xl bg-white border-2 ${
-                plan.popular ? 'border-purple-600 shadow-2xl' : 'border-gray-200'
+                plan.popular ? 'border-orange-600 shadow-2xl' : 'border-gray-200'
               }`}
             >
               {plan.popular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-purple-600 to-purple-500 text-white">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-orange-600 to-orange-500 text-white">
                   Most Popular
                 </div>
               )}
@@ -649,7 +638,7 @@ function PricingSection() {
               <div className="mb-6">
                 <h3 className="mb-2 text-gray-900">{plan.name}</h3>
                 <div className="flex items-baseline gap-2">
-                  <span className="bg-gradient-to-r from-purple-600 to-purple-500 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-orange-600 to-orange-500 bg-clip-text text-transparent">
                     {plan.price}
                   </span>
                   <span className="text-gray-600">{plan.period}</span>
@@ -659,7 +648,7 @@ function PricingSection() {
               <ul className="mb-8 space-y-3">
                 {plan.features.map((feature, i) => (
                   <li key={i} className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-purple-600 flex-shrink-0" />
+                    <CheckCircle2 className="w-5 h-5 text-orange-600 flex-shrink-0" />
                     <span className="text-gray-700">{feature}</span>
                   </li>
                 ))}
@@ -682,7 +671,7 @@ function SocialProofSection() {
     {
       name: "Sarah Johnson",
       role: "Fitness Enthusiast",
-      quote: "Riva transformed how I approach fitness. The AI coaching is like having a personal trainer in my pocket!",
+      quote: "Burn transformed how I approach fitness. The AI coaching is like having a personal trainer in my pocket!",
       rating: 5
     },
     {
@@ -699,13 +688,6 @@ function SocialProofSection() {
     }
   ];
 
-  const stats = [
-    { value: "50K+", label: "Active Users", icon: Users },
-    { value: "1M+", label: "Workouts Logged", icon: Activity },
-    { value: "4.9", suffix: "/5", label: "App Rating", icon: Star },
-    { value: "95%", label: "User Satisfaction", icon: Heart }
-  ];
-
   return (
     <section id="testimonials" className="py-20 px-6">
       <div className="max-w-7xl mx-auto">
@@ -718,7 +700,7 @@ function SocialProofSection() {
         >
           <h2 className="mb-4 text-gray-900">Loved by Thousands</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Join a thriving community of fitness enthusiasts achieving their goals with Riva.
+            Join a thriving community of fitness enthusiasts achieving their goals with Burn.
           </p>
         </motion.div>
 
@@ -729,12 +711,6 @@ function SocialProofSection() {
           ))}
         </div>
 
-        {/* Stats Grid */}
-        <div className="grid md:grid-cols-4 gap-6">
-          {stats.map((stat, index) => (
-            <StatCard key={index} {...stat} delay={index * 0.1} />
-          ))}
-        </div>
       </div>
     </section>
   );
@@ -743,12 +719,12 @@ function SocialProofSection() {
 // Technology Section
 function TechnologySection() {
   const technologies = [
-    { name: "React Native", color: "from-blue-600 to-blue-500" },
-    { name: "GPT-4", color: "from-green-600 to-green-500" },
-    { name: "TensorFlow", color: "from-orange-600 to-orange-500" },
-    { name: "AWS", color: "from-yellow-600 to-yellow-500" },
-    { name: "TypeScript", color: "from-blue-700 to-blue-600" },
-    { name: "GraphQL", color: "from-pink-600 to-pink-500" }
+    { name: "React Native", icon: Smartphone, color: "from-blue-600 to-blue-500" },
+    { name: "GPT-4", icon: Bot, color: "from-green-600 to-green-500" },
+    { name: "TensorFlow", icon: Network, color: "from-orange-600 to-orange-500" },
+    { name: "AWS", icon: Cloud, color: "from-yellow-600 to-yellow-500" },
+    { name: "TypeScript", icon: FileText, color: "from-blue-700 to-blue-600" },
+    { name: "GraphQL", icon: Database, color: "from-pink-600 to-pink-500" }
   ];
 
   return (
@@ -779,8 +755,8 @@ function TechnologySection() {
               whileHover={{ scale: 1.05 }}
               className="p-6 rounded-xl bg-white border border-gray-200 text-center"
             >
-              <div className={`mb-2 h-12 flex items-center justify-center text-2xl font-bold bg-gradient-to-r ${tech.color} bg-clip-text text-transparent`}>
-                {tech.name.charAt(0)}
+              <div className={`mb-2 h-12 flex items-center justify-center bg-gradient-to-r ${tech.color} rounded-lg`}>
+                <tech.icon className="w-8 h-8 text-white" />
               </div>
               <div className="font-semibold text-gray-900 text-sm">{tech.name}</div>
             </motion.div>
@@ -800,7 +776,7 @@ function DownloadCTA() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative p-12 rounded-3xl bg-gradient-to-br from-purple-600 to-purple-500 text-white overflow-hidden"
+          className="relative p-12 rounded-3xl bg-gradient-to-br from-orange-600 to-orange-500 text-white overflow-hidden"
         >
           {/* Background Pattern */}
           <div className="absolute inset-0 opacity-10">
@@ -810,8 +786,8 @@ function DownloadCTA() {
 
           <div className="relative text-center">
             <h2 className="mb-4 text-white">Ready to Transform Your Fitness?</h2>
-            <p className="mb-8 text-purple-100 max-w-2xl mx-auto">
-              Join thousands of users who are already achieving their fitness goals with Riva.
+            <p className="mb-8 text-orange-100 max-w-2xl mx-auto">
+              Join thousands of users who are already achieving their fitness goals with Burn.
               Download now and start your journey.
             </p>
 
@@ -819,7 +795,7 @@ function DownloadCTA() {
               <Button 
                 size="lg" 
                 variant="secondary" 
-                className="bg-white text-purple-600 hover:bg-gray-100"
+                className="bg-white text-orange-600 hover:bg-gray-100"
                 icon={Apple}
               >
                 Download for iOS
@@ -851,10 +827,10 @@ function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-600 to-purple-500 flex items-center justify-center text-white">
-                <Dumbbell className="w-6 h-6" />
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-600 to-orange-500 flex items-center justify-center text-white">
+                <Flame className="w-6 h-6" />
               </div>
-              <span className="text-xl font-bold text-white">Riva</span>
+              <span className="text-xl font-bold text-white">Burn</span>
             </div>
             <p className="text-sm">
               Transform your fitness journey with AI-powered coaching and comprehensive tracking.
@@ -865,9 +841,9 @@ function Footer() {
           <div>
             <h6 className="mb-4 text-white">Product</h6>
             <ul className="space-y-2 text-sm">
-              <li><a href="#features" className="hover:text-purple-400 transition-colors">Features</a></li>
-              <li><a href="#pricing" className="hover:text-purple-400 transition-colors">Pricing</a></li>
-              <li><a href="#ai" className="hover:text-purple-400 transition-colors">AI Coach</a></li>
+              <li><a href="#features" className="hover:text-orange-400 transition-colors">Features</a></li>
+              <li><a href="#pricing" className="hover:text-orange-400 transition-colors">Pricing</a></li>
+              <li><a href="#ai" className="hover:text-orange-400 transition-colors">AI Coach</a></li>
             </ul>
           </div>
 
@@ -875,9 +851,9 @@ function Footer() {
           <div>
             <h6 className="mb-4 text-white">Company</h6>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:text-purple-400 transition-colors">About</a></li>
-              <li><a href="#" className="hover:text-purple-400 transition-colors">Blog</a></li>
-              <li><a href="#" className="hover:text-purple-400 transition-colors">Careers</a></li>
+              <li><a href="#" className="hover:text-orange-400 transition-colors">About</a></li>
+              <li><a href="#" className="hover:text-orange-400 transition-colors">Blog</a></li>
+              <li><a href="#" className="hover:text-orange-400 transition-colors">Careers</a></li>
             </ul>
           </div>
 
@@ -885,15 +861,15 @@ function Footer() {
           <div>
             <h6 className="mb-4 text-white">Legal</h6>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:text-purple-400 transition-colors">Privacy</a></li>
-              <li><a href="#" className="hover:text-purple-400 transition-colors">Terms</a></li>
-              <li><a href="#" className="hover:text-purple-400 transition-colors">Contact</a></li>
+              <li><a href="#" className="hover:text-orange-400 transition-colors">Privacy</a></li>
+              <li><a href="#" className="hover:text-orange-400 transition-colors">Terms</a></li>
+              <li><a href="#" className="hover:text-orange-400 transition-colors">Contact</a></li>
             </ul>
           </div>
         </div>
 
         <div className="pt-8 border-t border-gray-800 text-center text-sm">
-          <p>&copy; {currentYear} Riva. All rights reserved.</p>
+          <p>&copy; {currentYear} Burn. All rights reserved.</p>
         </div>
       </div>
     </footer>

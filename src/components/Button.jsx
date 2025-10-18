@@ -11,9 +11,9 @@ export function Button({
   ...props 
 }) {
   const variants = {
-    primary: 'bg-gradient-to-r from-purple-600 to-purple-500 text-white hover:from-purple-700 hover:to-purple-600 shadow-lg shadow-purple-500/30',
-    secondary: 'bg-white text-purple-600 border-2 border-purple-600 hover:bg-purple-50',
-    outline: 'bg-transparent text-gray-900 border-2 border-gray-300 hover:border-purple-600 hover:text-purple-600',
+    primary: 'bg-gradient-to-r from-orange-600 to-orange-500 text-white hover:from-orange-700 hover:to-orange-600 shadow-lg shadow-orange-500/30',
+    secondary: 'bg-white text-orange-600 border-2 border-orange-600 hover:bg-orange-50',
+    outline: 'bg-transparent text-gray-900 border-2 border-gray-300 hover:border-orange-600 hover:text-orange-600',
   };
 
   const sizes = {

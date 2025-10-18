@@ -18,7 +18,7 @@ export function TestimonialCard({ name, role, image, quote, rating = 5, classNam
       {/* Rating Stars */}
       <div className="flex gap-1 mb-4">
         {[...Array(rating)].map((_, i) => (
-          <Star key={i} className="w-5 h-5 fill-purple-600 text-purple-600" />
+          <Star key={i} className="w-5 h-5 fill-orange-600 text-orange-600" />
         ))}
       </div>
       
@@ -27,7 +27,7 @@ export function TestimonialCard({ name, role, image, quote, rating = 5, classNam
       
       {/* Author */}
       <div className="flex items-center gap-4">
-        <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-600 to-purple-500 flex items-center justify-center text-white overflow-hidden">
+        <div className="w-12 h-12 rounded-full bg-gradient-to-br from-orange-600 to-orange-500 flex items-center justify-center text-white overflow-hidden">
           {image ? (
             <img src={image} alt={name} className="w-full h-full object-cover" />
           ) : (

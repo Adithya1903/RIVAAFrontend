@@ -1,7 +1,7 @@
-# Riva Landing Page - Cursor Rules
+# Burn Landing Page - Cursor Rules
 
 ## Project Context
-Riva is a premium landing page for an AI-powered React Native fitness app combining Strong-style workout tracking with GPT-4 AI coaching and Strava-like social features.
+Burn is a premium landing page for an AI-powered React Native fitness app combining Strong-style workout tracking with GPT-4 AI coaching and Strava-like social features.
 
 ## Tech Stack
 - React 18 with Vite
@@ -12,11 +12,11 @@ Riva is a premium landing page for an AI-powered React Native fitness app combin
 
 ## Design System
 
-### Colors (Primary Purple Theme)
-- Primary: #6366F1, #8B5CF6, #7C3AED, #9333EA
-- Secondary: Orange (#F97316), Green (#10B981), Red (#EF4444)
+### Colors (Primary Orange Theme)
+- Primary: #F97316, #EA580C, #DC2626, #EF4444
+- Secondary: Purple (#8B5CF6), Green (#10B981), Blue (#3B82F6)
 - Neutrals: #1F2937 (dark), #F9FAFB (light), #FFFFFF
-- Always use purple gradients: `from-purple-600 to-purple-500`
+- Always use orange gradients: `from-orange-600 to-orange-500`
 
 ### Typography Rules
 **CRITICAL**: NEVER add Tailwind font-size, font-weight, or line-height classes
@@ -74,13 +74,13 @@ export function ComponentName({ prop1, prop2, className }) {
 ```
 
 ### Button Variants
-- primary: Purple gradient with shadow
-- secondary: White with purple border
+- primary: Orange gradient with shadow
+- secondary: White with orange border
 - outline: Transparent with gray border
 
 ### Gradient Text Pattern
 ```jsx
-<span className="bg-gradient-to-r from-purple-600 to-purple-500 bg-clip-text text-transparent">
+<span className="bg-gradient-to-r from-orange-600 to-orange-500 bg-clip-text text-transparent">
   Gradient Text
 </span>
 ```
@@ -111,7 +111,7 @@ src/
 6. Premium Pricing - Free vs Premium comparison
 7. Social Proof - Testimonials + animated stats
 8. Technology Stack - Tech badges grid
-9. Download CTA - Purple gradient full-width
+9. Download CTA - Orange gradient full-width
 10. Footer - Links and copyright
 
 ## Key Components
@@ -123,7 +123,7 @@ src/
 
 ### FeatureCard
 - Hoverable cards with lift effect
-- Icon in purple gradient circle
+- Icon in orange gradient circle
 - Optional gradient background
 
 ### StatCard
@@ -182,14 +182,14 @@ transition={{ delay: index * 0.1 }}
 
 ### Gradient Overlay
 ```jsx
-<div className="absolute inset-0 bg-gradient-to-br from-purple-600/10 to-purple-500/10 opacity-0 hover:opacity-100 transition-opacity"></div>
+<div className="absolute inset-0 bg-gradient-to-br from-orange-600/10 to-orange-500/10 opacity-0 hover:opacity-100 transition-opacity"></div>
 ```
 
 ## Do's and Don'ts
 
 ### DO:
 ✅ Use Motion for all animations
-✅ Keep purple as primary brand color
+✅ Keep orange as primary brand color
 ✅ Use gradient text for emphasis
 ✅ Follow card-based design pattern
 ✅ Test responsive layouts
@@ -222,9 +222,9 @@ transition={{ delay: index * 0.1 }}
 2. Follow established patterns
 3. Match existing animation style
 4. Maintain responsive behavior
-5. Use purple gradient theme
+5. Use orange gradient theme
 6. Test on mobile first
 
 ---
-Remember: Premium, modern, purple-themed, animated, mobile-first!
+Remember: Premium, modern, orange-themed, animated, mobile-first!
 

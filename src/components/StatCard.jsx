@@ -42,11 +42,11 @@ export function StatCard({ value, suffix = '', label, icon: Icon, delay = 0, cla
       )}
     >
       {Icon && (
-        <div className="mb-4 inline-flex p-3 rounded-xl bg-gradient-to-br from-purple-600 to-purple-500 text-white">
+        <div className="mb-4 inline-flex p-3 rounded-xl bg-gradient-to-br from-orange-600 to-orange-500 text-white">
           <Icon className="w-6 h-6" />
         </div>
       )}
-      <div className="mb-2 bg-gradient-to-r from-purple-600 to-purple-500 bg-clip-text text-transparent">
+      <div className="mb-2 bg-gradient-to-r from-orange-600 to-orange-500 bg-clip-text text-transparent">
         <span className="inline-block">{count.toLocaleString()}{suffix}</span>
       </div>
       <p className="text-gray-600">{label}</p>
